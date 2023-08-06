@@ -3,8 +3,14 @@
     --cor-fonte-primaria: #464646;
     --cor-fonte-secundaria: #A3A3A3;
     --cor-fonte-terciaria: #FFFFFF;
+    --cor-fonte-quarternaria: #4894FF;
+
+
     --cor-botao-primaria: #FFB050;
     --cor-botao-secundaria: #4894FF;
+    --cor-botao-terciaria: #FFFFFF;
+
+    --cor-fundo-primaria:#FFFFFF;
 }
 
 body {
@@ -101,7 +107,7 @@ main {
 
 .card-consulta {
     border-radius: 8px;
-    background-color: #FFFFFF;
+    background-color: var(--cor-fundo-secundaria);
     backdrop-filter: blur(11px);
     padding: 1.6rem;
     display: flex;
@@ -167,7 +173,55 @@ main {
 }
 
 .btn--azul {
-    width: 100%;
     color: var(--cor-fonte-terciaria);
     background-color: var(--cor-botao-secundaria);
+}
+/* BOTÃO CADASTRAR NOVA CONSULTA */
+.btn__cadastrar{
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    position: sticky;
+    bottom: 74px;
+    left: 100%;
+    margin-right: 16px;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 16px var(--cor-botao-secundaria);
+}
+
+/* RODAPE */
+.rodape{
+    position:sticky;
+    bottom: 0;
+    background-color: var(--cor-fundo-primaria);
+    height: 4rem;
+    padding: 1rem 0 0.8rem 0;
+    border-radius: 12px 12px 0 0
+}
+.rodape__lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+.rodape__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rodape__item:last-child{
+    gap: 0.5rem;
+}
+.item__icone{
+    max-width: 24px;
+}
+.item__link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.9rem;
+    color: var(--cor-fonte-primaria);
+}
+.rodape__item:first-child .item__link{
+    color: var(--cor-fonte-quarternaria);
 }
