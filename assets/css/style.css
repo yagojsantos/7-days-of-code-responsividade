@@ -1,4 +1,4 @@
-:root{
+:root {
     font-size: 62.5%;
     --cor-fonte-primaria: #464646;
     --cor-fonte-secundaria: #A3A3A3;
@@ -6,6 +6,168 @@
     --cor-botao-primaria: #FFB050;
     --cor-botao-secundaria: #4894FF;
 }
-body{
+
+body {
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #F8F4FF 0%, #EFF0F4 100%);
+}
+
+main {
+    flex: 1;
+}
+
+/* ESTILIZAÇÕES GERAIS DOS CARDS */
+.card-perfil {
+    display: grid;
+    column-gap: 1.6rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-areas:
+        "foto-perfil nome chat"
+        "foto-perfil consulta-desc chat";
+}
+
+.card-perfil__foto {
+    border-radius: 50%;
+    width: 32px;
+    grid-area: foto-perfil;
+}
+
+.card-perfil__nome {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    align-self: end;
+    color: var(--cor-fonte-primaria);
+    grid-area: nome;
+}
+
+.card-perfil__consulta-desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.92rem;
+    align-self: center;
+    color: var(--cor-fonte-secundaria);
+    grid-area: consulta-desc;
+}
+
+/* CABECALHO */
+.cabecalho {
+    padding: 3.2rem 1.6rem 2.2rem;
+}
+
+.cabecalho .card-perfil {
+    grid-template-areas:
+        "foto-perfil nome"
+        "foto-perfil consulta-desc";
+}
+
+.cabecalho .card-perfil__foto {
+    width: 57px;
+}
+
+.cabecalho .card-perfil__nome {
+    font-size: 2.2rem;
+}
+
+.cabecalho .card-perfil__consulta-desc {
+    font-size: 1.4rem;
+}
+
+/* SESSÃO DE CONSULTAS */
+.consultas {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 0 1.6rem 1.6rem;
+}
+
+/* CONSULTAS DO DIA */
+.consultas__titulo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-fonte-primaria);
+    line-height: 4rem;
+}
+
+.consultas__do-dia {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.card-consulta {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    backdrop-filter: blur(11px);
+    padding: 1.6rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.card-consulta__chat {
+    width: 32px;
+    grid-area: chat;
+    background: url("../img/icons/chatCirculo1.svg") no-repeat;
+}
+
+.card-consulta__linha {
+    margin: 0 -1.6rem;
+    height: 1px;
+    background-color: var(--cor-fonte-primaria);
+    opacity: 0.10000000149011612;
+}
+
+.card-consulta__hora {
+    color: var(--cor-fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.remota::before {
+    content: url("../img/icons/camera.svg");
+    padding-right: 0.8rem;
+}
+
+.presencial::before {
+    content: url("../img/icons/localizacao.svg");
+    padding-right: 0.8rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.card-consulta__botoes {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.btn {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.24rem;
+    border-radius: 8px;
+    padding: 1.3rem 0;
+    width: 100%;
+}
+
+.btn--laranja {
+    color: var(--cor-fonte-terciaria);
+    background-color: var(--cor-botao-primaria);
+}
+
+.btn--branco {
+    border: 1px solid #ECECEC;
+    color: var(--cor-fonte-primaria);
+}
+
+.btn--azul {
+    width: 100%;
+    color: var(--cor-fonte-terciaria);
+    background-color: var(--cor-botao-secundaria);
 }

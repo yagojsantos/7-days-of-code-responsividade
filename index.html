@@ -6,12 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsiv Medi</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header class="cabecalho">
+        <div class="card-perfil">
+            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-1.svg" alt="Foto de perfil do médico(a)">
+            <span class="card-perfil__nome">Olá, Sônia</span>
+            <span class="card-perfil__consulta-desc">Mais 4 consultas hoje</span>
+        </div>
+    </header>
+    <main>
+        <section class="consultas">
+            <div>
+                <span class="consultas__titulo">Hoje</span>
+                <section class="consultas__do-dia">
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-2.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Luciana Dias</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">14:00 - 15:00 (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-3.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Larissa Santana</span>
+                            <span class="card-perfil__consulta-desc presencial">Consulta no local</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">16:00 - 17:00 - (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--azul">Ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-4.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Marcos Correia</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">17:20 - 18:00 (40 minutos)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <span class="consultas__titulo">Amanhã</span>
+                <section class="consultas__do-dia">
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-5.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Clara Lemos</span>
+                            <span class="card-perfil__consulta-desc presencial">Consulta no local</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">18:00 - 19:00 - (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--azul">Ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-2.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Luciana Dias</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">14:00 - 15:00 (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-4.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Marcos Correia</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">17:20 - 18:00 (40 minutos)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-3.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Larissa Santana</span>
+                            <span class="card-perfil__consulta-desc presencial">Consulta no local</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">16:00 - 17:00 - (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--azul">Ver endereço</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <span class="consultas__titulo">Quarta-feira</span>
+                <section class="consultas__do-dia">
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-5.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Clara Lemos</span>
+                            <span class="card-perfil__consulta-desc presencial">Consulta no local</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">18:00 - 19:00 - (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--azul">Ver endereço</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-2.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Luciana Dias</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">14:00 - 15:00 (1 hora)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                    <div class="card-consulta">
+                        <div class="card-perfil">
+                            <img class="card-perfil__foto" src="./assets/img/perfis/perfil-4.svg"
+                                alt="Foto de perfil do(a) paciente.">
+                            <span class="card-perfil__nome">Marcos Correia</span>
+                            <span class="card-perfil__consulta-desc remota">Consulta remota</span>
+                            <a href="#" class="card-consulta__chat"></a>
+                        </div>
+                        <div class="card-consulta__linha"></div>
+                        <span class="card-consulta__hora">17:20 - 18:00 (40 minutos)</span>
+                        <div class="card-consulta__botoes">
+                            <a href="#" class="btn btn--laranja">Ligar por vídeo</a>
+                            <a href="#" class="btn btn--branco">Ligar por áudio</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="card-consulta">
+                <div class="card-perfil">
+                    <img class="card-perfil__foto" src="./assets/img/perfis/perfil-3.svg"
+                        alt="Foto de perfil do(a) paciente.">
+                    <span class="card-perfil__nome">Larissa Santana</span>
+                    <span class="card-perfil__consulta-desc presencial">Consulta no local</span>
+                    <a href="#" class="card-consulta__chat"></a>
+                </div>
+                <div class="card-consulta__linha"></div>
+                <span class="card-consulta__hora">16:00 - 17:00 - (1 hora)</span>
+                <div class="card-consulta__botoes">
+                    <a href="#" class="btn btn--azul">Ver endereço</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
 </body>
 
