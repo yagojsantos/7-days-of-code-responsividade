@@ -19,6 +19,7 @@ body {
     flex-flow: column nowrap;
     min-height: 100vh;
     background: linear-gradient(135deg, #F8F4FF 0%, #EFF0F4 100%);
+    position: relative;
 }
 
 main {
@@ -176,25 +177,76 @@ main {
     color: var(--cor-fonte-terciaria);
     background-color: var(--cor-botao-secundaria);
 }
-/* BOTÃO CADASTRAR NOVA CONSULTA */
-.btn__cadastrar{
+/* CADASTRO DE CONSULTAS */
+/* BOTÕES AREA CADASTRAR NOVA CONSULTA */
+.btn--azul--redondo{
+    display: block;
     width: 56px;
     height: 56px;
-    border: none;
     border-radius: 50%;
+    box-shadow: 0 4px 16px var(--cor-botao-secundaria);
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn--cadastrar{   
+    background-image: url(../img/icons/btn-mais.svg);
+    background-size: 16px ;
+}
+.cadastro-consulta__opcao:nth-child(1){
+    order: 3;
+}
+#cadastro-consulta-btn{
+    display:none;
+}
+/* #cadastro-consulta-btn:checked~.cadastro-consulta__opcao{
+    display: flex;
+} */
+/* BOTÕES CONSULTA REMOTA E PRESENCIAL */
+.cadastro-consulta__opcoes{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
     position: sticky;
-    bottom: 74px;
+    bottom: 1.6rem;
     left: 100%;
     margin-right: 16px;
-    font-size: 1.6rem;
-    box-shadow: 0 4px 16px var(--cor-botao-secundaria);
+    bottom: 74px;
+    z-index: 2;
 }
 
+.cadastro-consulta__opcao{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1.6rem;
+}
+.cadastro-consulta__opcao:not(:first-child){
+    display: none;
+}
+/* .opcao__texto{
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.92rem;
+    color: var(--cor-fonte-primaria);
+    text-align: center;
+    background-color: var(--cor-botao-terciaria);
+    padding: 0.2rem 0.8rem;
+    border-radius: 16px;
+} */
+/* .opcao__btn-presencial{
+    background-image: url(../img/icons/btn-presencial.svg);
+    background-size: 20px 24px;
+}
+.opcao__btn-remota{
+    background-image: url(../img/icons/btn-remota.svg);
+    background-size: 24px 16px;
+} */
 /* RODAPE */
 .rodape{
     position:sticky;
     bottom: 0;
-    background-color: var(--cor-fundo-primaria);
+    background-color: var(--cor-botao-terciaria);
     height: 4rem;
     padding: 1rem 0 0.8rem 0;
     border-radius: 12px 12px 0 0
