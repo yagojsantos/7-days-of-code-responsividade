@@ -90,8 +90,8 @@ main {
     flex-direction: column;
     gap: 2.4rem;
     padding: 0 1.6rem 1.6rem;
+    align-items: center;
 }
-
 /* CONSULTAS DO DIA */
 .consultas__titulo {
     font-size: 1.6rem;
@@ -114,6 +114,8 @@ main {
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
+    min-width: 300px;
+    max-width: 448px;
 }
 
 .card-consulta__chat {
@@ -276,4 +278,24 @@ main {
 }
 .rodape__item:first-child .item__link{
     color: var(--cor-fonte-quarternaria);
+}
+@media screen and (min-width:720px){
+    .consultas__titulo{
+        font-size: 1.8rem;
+    }
+    .consultas__do-dia{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width:1024px){
+    .consultas__do-dia{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+@media screen and (min-width:1440px){
+    .consultas__do-dia{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
