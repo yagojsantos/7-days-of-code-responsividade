@@ -289,13 +289,56 @@ main {
     }
 }
 @media screen and (min-width:1024px){
-    .consultas__do-dia{
-        grid-template-columns: repeat(3, 1fr);
+    body{
+        display: grid;
+        grid-template-columns: 15% 1fr;
+        grid-template-areas: 
+                "rodape-aside cabecalho"
+                "rodape-aside conteudo";
     }
-
+    .cabecalho{
+        grid-area:cabecalho;
+    }
+    main{
+        grid-area: conteudo;
+    }
+    
+    /* RODAPE */
+    .rodape{
+        grid-area:rodape-aside;
+        position: static;
+        height: auto;
+        padding: 0;
+        border-radius: 0;
+        border-right: solid 4px rgba(70, 70, 70, 0.1);
+    }
+    .rodape__lista{
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: start;
+        padding: 3.2rem 0 0 2rem;
+        gap: 2rem;
+    }
+    .rodape__item{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .rodape__item:last-child{
+        gap:1rem;
+    }
+    .item__icone{
+        width: 28px;
+    }
+    .item__link{
+        font-size: 1.4rem;
+    }
+    .item__link:hover{
+        border-bottom: solid 2px var(--cor-botao-secundaria);
+    }
 }
 @media screen and (min-width:1440px){
     .consultas__do-dia{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
