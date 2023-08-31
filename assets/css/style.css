@@ -246,6 +246,10 @@ main {
     background-image: url(../img/icons/btn-remota.svg);
     background-size: 24px 16px;
 } */
+/* FORMULARIO DE CADASTRO */
+.titulo, .form-cadastro{
+    display: none;
+}
 /* RODAPE */
 .rodape{
     position:sticky;
@@ -383,25 +387,7 @@ main {
     }
     main{
         grid-area: conteudo;
-    }
-    /* FORMULARIO DE CADASTRO */
-    .form-cadastro{
-        grid-template-columns: repeat(3, 300px);
-        grid-template-rows: repeat(2, fit);
-        padding-bottom: 4rem;
-        gap: 1rem 4.8rem;
-    }
-    .form-cadastro fieldset:nth-child(2){
-        order: 4;
-    }
-    .form-cadastro fieldset:nth-child(3){
-        order: 2;
-        grid-area: 1/2/3/4;
-    }
-    #form-cadastro__observacoes{
-        height: 120px;
-    }
-   
+    }   
     /* RODAPE */
     .rodape{
         grid-area:rodape-aside;
@@ -439,5 +425,22 @@ main {
 @media screen and (min-width:1440px){
     .consultas__do-dia{
         grid-template-columns: repeat(3, 1fr);
+    }
+    /* FORMULARIO DE CADASTRO */
+    .form-cadastro{
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, fit);
+        padding-bottom: 4rem;
+        gap: 1rem 4.8rem;
+    }
+    .form-cadastro fieldset:nth-child(2){
+        order: 4;
+    }
+    .form-cadastro fieldset:nth-child(3){
+        order: 2;
+        grid-area: 1/2/3/4;
+    }
+    #form-cadastro__observacoes{
+        height: 120px;
     }
 }
