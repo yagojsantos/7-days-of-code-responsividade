@@ -4,8 +4,10 @@
     --cor-fonte-secundaria: #A3A3A3;
     --cor-fonte-terciaria: #FFFFFF;
     --cor-fonte-quarternaria: #4894FF;
-
-
+    --cor-fonte-formulario-primaria: #898989;
+    --cor-fonte-formulario-secundaria: #CFCFCF;
+    --cor-fonte-formulario-terciaria: #ADADAD;
+ 
     --cor-botao-primaria: #FFB050;
     --cor-botao-secundaria: #4894FF;
     --cor-botao-terciaria: #FFFFFF;
@@ -287,7 +289,87 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-}
+    .cadastro-consulta__opcoes{
+        display: none;
+    }
+    /* FORMULARIO DE CADASTRO */
+    .titulo{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 3.2rem 0 4.8rem 0;
+        color: var(--cor-fonte-primaria);
+    }
+    .form-cadastro{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(2, fit);
+        padding: 0 1.6rem 1.6rem;
+        gap: 1rem 4.8rem;
+        justify-content: center;
+    }
+    .form-cadastro__lbl, .form-cadastro__campo, .lista-opcoes__item, #form-cadastro__observacoes{
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    .form-cadastro__lbl{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        color: var(--cor-fonte-formulario-primaria);
+    }
+   .form-cadastro fieldset{
+        display: flex;
+   }
+   .form-cadastro fieldset:nth-child(1){
+    flex-direction: column;
+    gap: 1rem;
+   }
+   .form-cadastro fieldset:nth-child(2){
+    justify-content: space-between;
+   }
+   .form-cadastro fieldset:nth-child(3){
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   }
+    .form-cadastro__campo, #form-cadastro__observacoes{
+        padding: 1.6rem;
+        border-radius: 8px;
+        border: 1px solid #ECECEC;
+        color: var(--cor-fonte-formulario-terciaria);
+      }
+    .form-cadastro__campo::placeholder{
+      color: var(--cor-fonte-formulario-secundaria);
+    }
+    #lista-opcoes{
+        background-color: var(--cor-fundo-primaria);
+    }
+    #lista-opcoes>.lista-opcoes__item{
+       color: var(--cor-fonte-primaria);
+    }
+    #form-cadastro__observacoes{
+        resize: none;
+    }
+    #form-cadastro__btn{
+        width:fit-content;
+        padding: 1.6rem;
+        align-self: self-end;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--cor-fonte-quarternaria);
+        border: solid 2px var(--cor-botao-secundaria);
+        background-color: var(--cor-botao-terciaria);
+        transition: all 0.5s;
+    }
+    #form-cadastro__btn:hover{
+        cursor: pointer;
+        color: var(--cor-fonte-terciaria);
+        background-color: var(--cor-botao-secundaria);
+    }
+} 
 @media screen and (min-width:1024px){
     body{
         display: grid;
@@ -302,7 +384,24 @@ main {
     main{
         grid-area: conteudo;
     }
-    
+    /* FORMULARIO DE CADASTRO */
+    .form-cadastro{
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, fit);
+        padding-bottom: 4rem;
+        gap: 1rem 4.8rem;
+    }
+    .form-cadastro fieldset:nth-child(2){
+        order: 4;
+    }
+    .form-cadastro fieldset:nth-child(3){
+        order: 2;
+        grid-area: 1/2/3/4;
+    }
+    #form-cadastro__observacoes{
+        height: 120px;
+    }
+   
     /* RODAPE */
     .rodape{
         grid-area:rodape-aside;

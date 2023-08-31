@@ -198,12 +198,12 @@
                 </section>
             </div>
         </section>
-            <ul class="cadastro-consulta__opcoes">
-                <li class="cadastro-consulta__opcao">
-                    <label for="cadastro-consulta-btn" class="btn--azul btn--azul--redondo btn--cadastrar"></label>
-                </li>
-                <input type="checkbox" id="cadastro-consulta-btn">
-                <!-- <li class="cadastro-consulta__opcao">
+        <ul class="cadastro-consulta__opcoes">
+            <li class="cadastro-consulta__opcao">
+                <label for="cadastro-consulta-btn" class="btn--azul btn--azul--redondo btn--cadastrar"></label>
+            </li>
+            <input type="checkbox" id="cadastro-consulta-btn">
+            <!-- <li class="cadastro-consulta__opcao">
                     <span class="opcao__texto">Nova consulta na casa do paciente</span>
                     <a href="#" class="btn--azul btn--azul--redondo opcao__btn-presencial"></a>
                 </li>
@@ -211,7 +211,46 @@
                     <span class="opcao__texto">Nova consulta por vídeo</span>
                     <a href="#" class="btn--azul btn--azul--redondo opcao__btn-remota"></a>
                 </li> -->
-            </ul>
+        </ul> 
+        <h2 class="titulo">Cadastrar</h2>
+        <form action="submit" class="form-cadastro">
+            <fieldset>
+                <label class="form-cadastro__lbl">
+                    Nome:
+                    <input type="text" name="nome-paciente" id="form-cadastro__nome" class="form-cadastro__campo"
+                        placeholder="Nome do paciente">
+                </label>
+                <label class="form-cadastro__lbl">
+                    Consulta:
+                    <select id="lista-opcoes" class="form-cadastro__campo">
+                        <option value="" selected disabled hidden class="lista-opcoes__item">Selecione uma opção
+                        </option>
+                        <option value="consulta remota" class="lista-opcoes__item">Remota</option>
+                        <option value="consulta local" class="lista-opcoes__item">Local</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label class="form-cadastro__lbl">
+                    Data:
+                    <input type="date" name="data-consulta" id="form-cadastro__data-consulta"
+                        class="form-cadastro__campo">
+                </label>
+                <label class="form-cadastro__lbl">
+                    Hora:
+                    <input type="time" name="hora-consulta" id="form-cadastro__hora-consulta"
+                        class="form-cadastro__campo">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label class="form-cadastro__lbl">
+                    Obs:
+                    <textarea name="observacoes-consulta" id="form-cadastro__observacoes" cols="30" rows="10"
+                        placeholder="Digite aqui seus apontamentos..."></textarea>
+                </label>
+                <input type="submit" value="Salvar" class="btn" id="form-cadastro__btn">
+            </fieldset>
+        </form>
     </main>
     <footer class="rodape">
         <ul class="rodape__lista">
@@ -224,7 +263,6 @@
             <li class="rodape__item">
                 <img src="./assets/img/icons/rodape-clientes.png" alt="Clientes" class="item__icone">
                 <a href="#" class="item__link">
-
                     Clientes
                 </a>
             </li>
@@ -238,7 +276,6 @@
             <li class="rodape__item">
                 <img src="./assets/img/icons/rodape-menu.png" alt="Menu" class="item__icone">
                 <a href="#" class="item__link">
-
                     Menu
                 </a>
             </li>
