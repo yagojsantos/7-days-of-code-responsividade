@@ -274,6 +274,7 @@ main {
     }
     /* FORMULARIO DE CADASTRO */
     .titulo {
+        display: block;
         font-size: 2.4rem;
         font-weight: 700;
         text-align: center;
