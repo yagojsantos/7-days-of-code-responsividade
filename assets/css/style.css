@@ -7,14 +7,10 @@
     --cor-fonte-formulario-primaria: #898989;
     --cor-fonte-formulario-secundaria: #CFCFCF;
     --cor-fonte-formulario-terciaria: #ADADAD;
- 
     --cor-botao-primaria: #FFB050;
     --cor-botao-secundaria: #4894FF;
     --cor-botao-terciaria: #FFFFFF;
-
-    --cor-fundo-primaria:#FFFFFF;
 }
-
 body {
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -23,11 +19,9 @@ body {
     background: linear-gradient(135deg, #F8F4FF 0%, #EFF0F4 100%);
     position: relative;
 }
-
 main {
     flex: 1;
 }
-
 /* ESTILIZAÇÕES GERAIS DOS CARDS */
 .card-perfil {
     display: grid;
@@ -38,13 +32,11 @@ main {
         "foto-perfil nome chat"
         "foto-perfil consulta-desc chat";
 }
-
 .card-perfil__foto {
     border-radius: 50%;
     width: 32px;
     grid-area: foto-perfil;
 }
-
 .card-perfil__nome {
     font-size: 1.4rem;
     font-weight: 700;
@@ -53,7 +45,6 @@ main {
     color: var(--cor-fonte-primaria);
     grid-area: nome;
 }
-
 .card-perfil__consulta-desc {
     font-size: 1.2rem;
     font-weight: 400;
@@ -62,30 +53,24 @@ main {
     color: var(--cor-fonte-secundaria);
     grid-area: consulta-desc;
 }
-
 /* CABECALHO */
 .cabecalho {
     padding: 3.2rem 1.6rem 2.2rem;
 }
-
 .cabecalho .card-perfil {
     grid-template-areas:
         "foto-perfil nome"
         "foto-perfil consulta-desc";
 }
-
 .cabecalho .card-perfil__foto {
     width: 57px;
 }
-
 .cabecalho .card-perfil__nome {
     font-size: 2.2rem;
 }
-
 .cabecalho .card-perfil__consulta-desc {
     font-size: 1.4rem;
 }
-
 /* SESSÃO DE CONSULTAS */
 .consultas {
     display: flex;
@@ -94,20 +79,18 @@ main {
     padding: 0 1.6rem 1.6rem;
     align-items: center;
 }
-/* CONSULTAS DO DIA */
 .consultas__titulo {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--cor-fonte-primaria);
     line-height: 4rem;
 }
-
+/* CONSULTAS DO DIA */
 .consultas__do-dia {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
 }
-
 .card-consulta {
     border-radius: 8px;
     background-color: var(--cor-fundo-secundaria);
@@ -119,43 +102,36 @@ main {
     min-width: 300px;
     max-width: 448px;
 }
-
-.card-consulta__chat {
-    width: 32px;
-    grid-area: chat;
-    background: url("../img/icons/chatCirculo1.svg") no-repeat;
-}
-
-.card-consulta__linha {
-    margin: 0 -1.6rem;
-    height: 1px;
-    background-color: var(--cor-fonte-primaria);
-    opacity: 0.10000000149011612;
-}
-
-.card-consulta__hora {
-    color: var(--cor-fonte-primaria);
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
 .remota::before {
     content: url("../img/icons/camera.svg");
     padding-right: 0.8rem;
 }
-
 .presencial::before {
     content: url("../img/icons/localizacao.svg");
     padding-right: 0.8rem;
     position: relative;
     top: 0.2rem;
 }
-
+.card-consulta__chat {
+    width: 32px;
+    grid-area: chat;
+    background: url("../img/icons/chatCirculo1.svg") no-repeat;
+}
+.card-consulta__linha {
+    margin: 0 -1.6rem;
+    height: 1px;
+    background-color: var(--cor-fonte-primaria);
+    opacity: 0.10000000149011612;
+}
+.card-consulta__hora {
+    color: var(--cor-fonte-primaria);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 .card-consulta__botoes {
     display: flex;
     gap: 1.8rem;
 }
-
 .btn {
     font-size: 1.4rem;
     font-weight: 500;
@@ -166,48 +142,21 @@ main {
     padding: 1.3rem 0;
     width: 100%;
 }
-
 .btn--laranja {
     color: var(--cor-fonte-terciaria);
     background-color: var(--cor-botao-primaria);
 }
-
 .btn--branco {
     border: 1px solid #ECECEC;
     color: var(--cor-fonte-primaria);
 }
-
 .btn--azul {
     color: var(--cor-fonte-terciaria);
     background-color: var(--cor-botao-secundaria);
 }
-/* CADASTRO DE CONSULTAS */
-/* BOTÕES AREA CADASTRAR NOVA CONSULTA */
-.btn--azul--redondo{
-    display: block;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    box-shadow: 0 4px 16px var(--cor-botao-secundaria);
-    cursor: pointer;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.btn--cadastrar{   
-    background-image: url(../img/icons/btn-mais.svg);
-    background-size: 16px ;
-}
-.cadastro-consulta__opcao:nth-child(1){
-    order: 3;
-}
-#cadastro-consulta-btn{
-    display:none;
-}
-/* #cadastro-consulta-btn:checked~.cadastro-consulta__opcao{
-    display: flex;
-} */
+/* CADASTRO DE CONSULTAS MOBILE */
 /* BOTÕES CONSULTA REMOTA E PRESENCIAL */
-.cadastro-consulta__opcoes{
+.cadastro-consulta__opcoes {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -218,15 +167,38 @@ main {
     bottom: 74px;
     z-index: 2;
 }
-
-.cadastro-consulta__opcao{
+.cadastro-consulta__opcao {
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 1.6rem;
 }
-.cadastro-consulta__opcao:not(:first-child){
+.cadastro-consulta__opcao:not(:first-child) {
     display: none;
+}
+.cadastro-consulta__opcao:nth-child(1) {
+    order: 3;
+}
+#cadastro-consulta__btn {
+    display: none;
+}
+/* #cadastro-consulta__btn:checked~.cadastro-consulta__opcao{
+    display: flex;
+} */
+/* BOTÕES AREA CADASTRAR NOVA CONSULTA MOBILE*/
+.btn--azul--redondo {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px var(--cor-botao-secundaria);
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.btn--cadastrar {
+    background-image: url(../img/icons/btn-mais.svg);
+    background-size: 16px;
 }
 /* .opcao__texto{
     font-size: 1.2rem;
@@ -237,8 +209,8 @@ main {
     background-color: var(--cor-botao-terciaria);
     padding: 0.2rem 0.8rem;
     border-radius: 16px;
-} */
-/* .opcao__btn-presencial{
+} 
+.opcao__btn-presencial{
     background-image: url(../img/icons/btn-presencial.svg);
     background-size: 20px 24px;
 }
@@ -247,64 +219,68 @@ main {
     background-size: 24px 16px;
 } */
 /* FORMULARIO DE CADASTRO */
-.titulo, .form-cadastro{
+.titulo,
+.form-cadastro {
     display: none;
 }
 /* RODAPE */
-.rodape{
-    position:sticky;
+.rodape {
+    position: sticky;
     bottom: 0;
     background-color: var(--cor-botao-terciaria);
     height: 4rem;
     padding: 1rem 0 0.8rem 0;
     border-radius: 12px 12px 0 0
 }
-.rodape__lista{
+.rodape__lista {
     display: flex;
     justify-content: space-around;
     align-items: end;
 }
-.rodape__item{
+.rodape__item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.rodape__item:last-child{
+.rodape__item:last-child {
     gap: 0.5rem;
 }
-.item__icone{
+.item__icone {
     max-width: 24px;
 }
-.item__link{
+.item__link {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.9rem;
     color: var(--cor-fonte-primaria);
 }
-.rodape__item:first-child .item__link{
+.rodape__item:first-child .item__link {
     color: var(--cor-fonte-quarternaria);
 }
-@media screen and (min-width:720px){
-    .consultas__titulo{
+@media screen and (min-width:720px) {
+    /* SESSÃO DE CONSULTAS */
+    .consultas__titulo {
         font-size: 1.8rem;
     }
-    .consultas__do-dia{
+    .consultas__do-dia {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .cadastro-consulta__opcoes{
+    /* CADASTRO DE CONSULTAS MOBILE */
+    /* BOTÕES CONSULTA REMOTA E PRESENCIAL */
+    .cadastro-consulta__opcoes {
         display: none;
     }
     /* FORMULARIO DE CADASTRO */
-    .titulo{
+    .titulo {
         font-size: 2.4rem;
         font-weight: 700;
         text-align: center;
         padding: 3.2rem 0 4.8rem 0;
         color: var(--cor-fonte-primaria);
     }
-    .form-cadastro{
+    .form-cadastro {
         display: grid;
         grid-template-columns: repeat(2, 300px);
         grid-template-rows: repeat(2, fit);
@@ -312,53 +288,57 @@ main {
         gap: 1rem 4.8rem;
         justify-content: center;
     }
-    .form-cadastro__lbl, .form-cadastro__campo, .lista-opcoes__item, #form-cadastro__observacoes{
+    .form-cadastro__lbl,
+    .form-cadastro__campo,
+    .lista-opcoes__item,
+    #form-cadastro__observacoes {
         font-weight: 400;
         font-size: 1.6rem;
         line-height: 2.4rem;
     }
-    .form-cadastro__lbl{
+    .form-cadastro__lbl {
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
         color: var(--cor-fonte-formulario-primaria);
     }
-   .form-cadastro fieldset{
+    .form-cadastro fieldset {
         display: flex;
-   }
-   .form-cadastro fieldset:nth-child(1){
-    flex-direction: column;
-    gap: 1rem;
-   }
-   .form-cadastro fieldset:nth-child(2){
-    justify-content: space-between;
-   }
-   .form-cadastro fieldset:nth-child(3){
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-   }
-    .form-cadastro__campo, #form-cadastro__observacoes{
+    }
+    .form-cadastro fieldset:nth-child(1) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .form-cadastro fieldset:nth-child(2) {
+        justify-content: space-between;
+    }
+    .form-cadastro fieldset:nth-child(3) {
+        grid-column: 1/3;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .form-cadastro__campo,
+    #form-cadastro__observacoes {
         padding: 1.6rem;
         border-radius: 8px;
         border: 1px solid #ECECEC;
         color: var(--cor-fonte-formulario-terciaria);
-      }
-    .form-cadastro__campo::placeholder{
-      color: var(--cor-fonte-formulario-secundaria);
     }
-    #lista-opcoes{
-        background-color: var(--cor-fundo-primaria);
+    .form-cadastro__campo::placeholder {
+        color: var(--cor-fonte-formulario-secundaria);
     }
-    #lista-opcoes>.lista-opcoes__item{
-       color: var(--cor-fonte-primaria);
+    #lista-opcoes {
+        background-color: #FFFFFF;
     }
-    #form-cadastro__observacoes{
+    #lista-opcoes>.lista-opcoes__item {
+        color: var(--cor-fonte-primaria);
+    }
+    #form-cadastro__observacoes {
         resize: none;
     }
-    #form-cadastro__btn{
-        width:fit-content;
+    #form-cadastro__btn {
+        width: fit-content;
         padding: 1.6rem;
         align-self: self-end;
         font-weight: 700;
@@ -368,79 +348,79 @@ main {
         background-color: var(--cor-botao-terciaria);
         transition: all 0.5s;
     }
-    #form-cadastro__btn:hover{
+    #form-cadastro__btn:hover {
         cursor: pointer;
         color: var(--cor-fonte-terciaria);
         background-color: var(--cor-botao-secundaria);
     }
-} 
-@media screen and (min-width:1024px){
-    body{
+}
+@media screen and (min-width:1024px) {
+    body {
         display: grid;
         grid-template-columns: 15% 1fr;
-        grid-template-areas: 
-                "rodape-aside cabecalho"
-                "rodape-aside conteudo";
+        grid-template-areas:
+            "rodape-aside cabecalho"
+            "rodape-aside conteudo";
     }
-    .cabecalho{
-        grid-area:cabecalho;
+    .cabecalho {
+        grid-area: cabecalho;
     }
-    main{
+    main {
         grid-area: conteudo;
-    }   
+    }
     /* RODAPE */
-    .rodape{
-        grid-area:rodape-aside;
+    .rodape {
+        grid-area: rodape-aside;
         position: static;
         height: auto;
         padding: 0;
         border-radius: 0;
         border-right: solid 4px rgba(70, 70, 70, 0.1);
     }
-    .rodape__lista{
+    .rodape__lista {
         flex-direction: column;
-        justify-content:flex-start;
+        justify-content: flex-start;
         align-items: start;
         padding: 3.2rem 0 0 2rem;
         gap: 2rem;
     }
-    .rodape__item{
+    .rodape__item {
         display: flex;
         flex-direction: row;
         gap: 1rem;
     }
-    .rodape__item:last-child{
-        gap:1rem;
+    .rodape__item:last-child {
+        gap: 1rem;
     }
-    .item__icone{
+    .item__icone {
         width: 28px;
     }
-    .item__link{
+    .item__link {
         font-size: 1.4rem;
     }
-    .item__link:hover{
+    .item__link:hover {
         border-bottom: solid 2px var(--cor-botao-secundaria);
     }
 }
-@media screen and (min-width:1440px){
-    .consultas__do-dia{
+@media screen and (min-width:1440px) {
+    .consultas__do-dia {
         grid-template-columns: repeat(3, 1fr);
     }
     /* FORMULARIO DE CADASTRO */
-    .form-cadastro{
+    .form-cadastro {
         grid-template-columns: repeat(3, 300px);
         grid-template-rows: repeat(2, fit);
         padding-bottom: 4rem;
         gap: 1rem 4.8rem;
     }
-    .form-cadastro fieldset:nth-child(2){
+    .form-cadastro fieldset:nth-child(2) {
         order: 4;
     }
-    .form-cadastro fieldset:nth-child(3){
+    .form-cadastro fieldset:nth-child(3) {
         order: 2;
         grid-area: 1/2/3/4;
     }
-    #form-cadastro__observacoes{
+    #form-cadastro__observacoes {
         height: 120px;
     }
 }
